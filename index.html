@@ -1,381 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080b14">
-  <meta name="description" content="NOVEX — Your next-generation digital service platform.">
-  <title>NOVEX | Beyond Digital. Beyond Limits.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b14">
+<title>NOVEX | Digital Service Platform</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #080b14;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 7%;
-      border-bottom: 1px solid #1e293b;
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      color: #38bdf8;
-    }
-
-    nav a {
-      color: #cbd5e1;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-
-    .hero {
-      min-height: 75vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 60px 20px;
-      background: radial-gradient(
-        ellipse at top,
-        #123451 0%,
-        #080b14 65%
-      );
-    }
-
-    .badge {
-      color: #7dd3fc;
-      border: 1px solid #0ea5e9;
-      border-radius: 30px;
-      padding: 7px 16px;
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-bottom: 24px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 10vw, 90px);
-      font-weight: 900;
-      letter-spacing: 5px;
-      line-height: 1.1;
-    }
-
-    h1 span {
-      color: #38bdf8;
-    }
-
-    .hero p {
-      max-width: 620px;
-      color: #94a3b8;
-      margin: 24px 0;
-      font-size: 17px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 25px;
-      background: #38bdf8;
-      color: #07111f;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      margin: 5px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: #ffffff;
-      border: 1px solid #334155;
-    }
-
-    section {
-      padding: 65px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
-
-    .section-subtitle {
-      color: #94a3b8;
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(220px, 1fr)
-      );
-      gap: 18px;
-    }
-
-    .card {
-      background: #101827;
-      border: 1px solid #243247;
-      border-radius: 14px;
-      padding: 25px;
-      transition: 0.25s;
-    }
-
-    .card:hover {
-      border-color: #38bdf8;
-      transform: translateY(-4px);
-    }
-
-    .icon {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-
-    .card h3 {
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: #94a3b8;
-      font-size: 14px;
-    }
-
-    .service-search {
-      display: block;
-      width: 100%;
-      max-width: 550px;
-      margin: 0 auto 30px;
-      padding: 15px;
-      border: 1px solid #334155;
-      background: #101827;
-      color: white;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    .service-card[hidden] {
-      display: none;
-    }
-
-    .cta {
-      text-align: center;
-      background: #0d1727;
-      border-top: 1px solid #1e293b;
-      border-bottom: 1px solid #1e293b;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #64748b;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 16px 5%;
-      }
-
-      nav a {
-        margin-left: 10px;
-        font-size: 12px;
-      }
-
-      .logo {
-        font-size: 22px;
-      }
-
-      section {
-        padding: 45px 5%;
-      }
-
-      .hero p {
-        font-size: 15px;
-      }
-    }
-  </style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#080b14;color:#fff;line-height:1.6}
+header{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #263247;position:sticky;top:0;background:#080b14;z-index:5}
+.logo{font-size:27px;font-weight:900;letter-spacing:3px;color:#38bdf8}
+nav a{color:#cbd5e1;text-decoration:none;margin-left:15px;font-size:14px}
+.hero{text-align:center;padding:65px 20px;background:radial-gradient(ellipse at top,#123451,#080b14 70%)}
+.badge{color:#7dd3fc;letter-spacing:2px;font-size:12px}
+h1{font-size:clamp(48px,10vw,76px);margin:12px}
+h1 span{color:#38bdf8}
+.hero p{color:#a8b5c8;max-width:600px;margin:12px auto 25px}
+button,.btn{background:#38bdf8;color:#07111f;padding:12px 18px;border:0;border-radius:7px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+.wrap{padding:45px 6%;max-width:1250px;margin:auto}
+h2{text-align:center;margin-bottom:8px}
+.sub{text-align:center;color:#94a3b8;margin-bottom:25px}
+input,select,textarea{width:100%;padding:13px;margin:7px 0 15px;background:#101827;color:white;border:1px solid #334155;border-radius:7px;font:inherit}
+.filters{display:grid;grid-template-columns:2fr 1fr;gap:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:#101827;border:1px solid #263247;border-radius:12px;padding:20px}
+.card h3{margin:7px 0}
+.card p{font-size:14px;color:#a8b5c8;margin-bottom:12px}
+.icon{font-size:28px}
+.price{color:#7dd3fc;font-weight:bold;margin:12px 0}
+.tag{display:inline-block;font-size:11px;color:#7dd3fc;border:1px solid #24516a;border-radius:20px;padding:3px 8px}
+.empty{text-align:center;color:#94a3b8;padding:25px;grid-column:1/-1}
+form{max-width:600px;margin:auto}
+.notice{font-size:12px;color:#94a3b8;margin:12px 0}
+footer{text-align:center;padding:25px;color:#64748b;border-top:1px solid #263247}
+[hidden]{display:none!important}
+@media(max-width:600px){header{padding:14px 4%}.logo{font-size:22px}nav a{margin-left:8px;font-size:12px}.wrap{padding:35px 5%}.filters{grid-template-columns:1fr}}
+</style>
 </head>
 
 <body>
+<header>
+  <div class="logo">NOVEX</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#request">Request</a>
+  </nav>
+</header>
 
-  <header>
-    <div class="logo">NOVEX</div>
+<main>
+<section class="hero" id="home">
+  <div class="badge">NEXT-GENERATION DIGITAL PLATFORM</div>
+  <h1>NOV<span>EX</span></h1>
+  <h2>Beyond Digital. Beyond Limits.</h2>
+  <p>Discover digital services, document assistance and smarter workflows in one place.</p>
+  <a class="btn" href="#services">Explore Services</a>
+</section>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
+<section class="wrap" id="services">
+  <h2>Digital Services</h2>
+  <p class="sub">Search services and explore available assistance.</p>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="badge">NEXT-GENERATION DIGITAL PLATFORM</div>
+  <div class="filters">
+    <input id="search" type="search" placeholder="Search services..." aria-label="Search services">
+    <select id="category" aria-label="Filter by category">
+      <option value="all">All Categories</option>
+      <option value="documents">Document Tools</option>
+      <option value="online">Online Assistance</option>
+      <option value="printing">Print & Scan</option>
+      <option value="business">Business Services</option>
+    </select>
+  </div>
 
-      <h1>NOV<span>EX</span></h1>
+  <div class="grid" id="serviceGrid"></div>
+</section>
 
-      <h2>Beyond Digital. Beyond Limits.</h2>
+<section class="wrap" id="request">
+  <h2>Request a Service</h2>
+  <p class="sub">Submit a basic service enquiry.</p>
 
-      <p>
-        One platform for digital services, document tools
-        and smarter workflows. Simple, secure and designed
-        for the future.
-      </p>
+  <form id="requestForm">
+    <label for="customer">Your name</label>
+    <input id="customer" name="customer" required maxlength="80" placeholder="Enter your name">
 
-      <div>
-        <a class="button" href="#services">Explore Services</a>
-        <a class="button secondary" href="#about">Discover NOVEX</a>
-      </div>
-    </section>
+    <label for="contact">Contact number or email</label>
+    <input id="contact" name="contact" required maxlength="120" placeholder="Enter contact details">
 
-    <section id="services">
-      <h2 class="section-title">Our Digital Services</h2>
+    <label for="selectedService">Select service</label>
+    <select id="selectedService" name="service" required>
+      <option value="">Choose a service</option>
+    </select>
 
-      <p class="section-subtitle">
-        Search and explore the services available on NOVEX.
-      </p>
+    <label for="message">What help do you need?</label>
+    <textarea id="message" name="message" rows="3" maxlength="1000" placeholder="Describe your request"></textarea>
 
-      <input
-        class="service-search"
-        id="serviceSearch"
-        type="search"
-        placeholder="Search services..."
-        aria-label="Search digital services"
-      >
+    <button type="submit">Create Enquiry</button>
+    <p class="notice">Prototype only: this demo creates a reference on your device. It does not send your information to NOVEX or store it in a server database. Do not enter sensitive personal information.</p>
+  </form>
+  <div id="result" class="card" hidden aria-live="polite"></div>
+</section>
+</main>
 
-      <div class="grid" id="serviceGrid">
+<footer>
+  © <span id="year"></span> NOVEX — Beyond Digital. Beyond Limits.
+</footer>
 
-        <article class="card service-card">
-          <div class="icon">📄</div>
-          <h3>PDF Tools</h3>
-          <p>Plan tools for merging, splitting and compressing PDF files.</p>
-        </article>
+<script>
+const services = [
+  {id:"PDF-01",name:"PDF Merge",category:"documents",icon:"📄",price:"From ₹20",desc:"Combine multiple PDF files. Processing tool to be integrated."},
+  {id:"PDF-02",name:"PDF Compression",category:"documents",icon:"🗜️",price:"From ₹20",desc:"Reduce PDF file size. Processing tool to be integrated."},
+  {id:"IMG-01",name:"Image Resize",category:"documents",icon:"🖼️",price:"From ₹20",desc:"Prepare an image at your required dimensions."},
+  {id:"IMG-02",name:"Image Format Conversion",category:"documents",icon:"🔄",price:"From ₹20",desc:"Request image format conversion assistance."},
+  {id:"ONL-01",name:"Online Form Assistance",category:"online",icon:"📝",price:"From ₹50",desc:"Assistance with eligible online forms. Official fees may be extra."},
+  {id:"ONL-02",name:"PAN Application Assistance",category:"online",icon:"🇮🇳",price:"From ₹50",desc:"Guidance for the applicable official PAN application process. Eligibility and official fees vary."},
+  {id:"ONL-03",name:"Passport Application Assistance",category:"online",icon:"🛂",price:"From ₹100",desc:"Application guidance. Government fees are separate and approval is not guaranteed."},
+  {id:"PRN-01",name:"Printing",category:"printing",icon:"🖨️",price:"From ₹2/page",desc:"Printing request. Final rate depends on page size and print type."},
+  {id:"PRN-02",name:"Scanning",category:"printing",icon:"📑",price:"From ₹10",desc:"Scan-to-file assistance, subject to local availability."},
+  {id:"BIZ-01",name:"Resume Preparation",category:"business",icon:"💼",price:"From ₹99",desc:"Request help preparing a professional resume."},
+  {id:"BIZ-02",name:"Business Document Assistance",category:"business",icon:"🏢",price:"From ₹99",desc:"General document preparation assistance; eligibility varies."},
+  {id:"BIZ-03",name:"Digital Design",category:"business",icon:"🎨",price:"From ₹99",desc:"Request a poster, banner or basic digital design."}
+];
 
-        <article class="card service-card">
-          <div class="icon">🖼️</div>
-          <h3>Image Tools</h3>
-          <p>Prepare images for resizing, cropping and format conversion.</p>
-        </article>
+const grid = document.getElementById("serviceGrid");
+const category = document.getElementById("category");
+const search = document.getElementById("search");
+const serviceSelect = document.getElementById("selectedService");
 
-        <article class="card service-card">
-          <div class="icon">📝</div>
-          <h3>Online Forms</h3>
-          <p>Request assistance with eligible online forms and applications.</p>
-        </article>
+function renderServices(){
+  const query = search.value.trim().toLowerCase();
+  const chosenCategory = category.value;
+  const filtered = services.filter(service =>
+    (chosenCategory === "all" || service.category === chosenCategory) &&
+    (service.name.toLowerCase().includes(query) ||
+     service.desc.toLowerCase().includes(query))
+  );
 
-        <article class="card service-card">
-          <div class="icon">🖨️</div>
-          <h3>Print & Scan</h3>
-          <p>Explore printing, scanning and document preparation services.</p>
-        </article>
+  grid.replaceChildren();
 
-        <article class="card service-card">
-          <div class="icon">🇮🇳</div>
-          <h3>Government Services</h3>
-          <p>Find information and assistance for eligible government services.</p>
-        </article>
+  if(!filtered.length){
+    const empty = document.createElement("p");
+    empty.className = "empty";
+    empty.textContent = "No matching services found.";
+    grid.appendChild(empty);
+    return;
+  }
 
-        <article class="card service-card">
-          <div class="icon">🤖</div>
-          <h3>AI Assistance</h3>
-          <p>Get guidance to find the right digital service for your needs.</p>
-        </article>
+  filtered.forEach(service => {
+    const card = document.createElement("article");
+    card.className = "card";
 
-      </div>
+    const icon = document.createElement("div");
+    icon.className = "icon";
+    icon.textContent = service.icon;
 
-      <p id="noResults" hidden style="text-align:center;margin-top:20px;color:#94a3b8;">
-        No matching services found.
-      </p>
-    </section>
+    const title = document.createElement("h3");
+    title.textContent = service.name;
 
-    <section id="about">
-      <h2 class="section-title">The Future Is Simpler</h2>
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = service.category;
 
-      <p class="section-subtitle">
-        NOVEX aims to bring digital services, smart automation
-        and customer support together in one platform.
-      </p>
+    const description = document.createElement("p");
+    description.textContent = service.desc;
 
-      <div class="grid">
-        <article class="card">
-          <div class="icon">⚡</div>
-          <h3>Smart Automation</h3>
-          <p>Our goal is to reduce repetitive work through reliable workflows.</p>
-        </article>
+    const price = document.createElement("div");
+    price.className = "price";
+    price.textContent = service.price;
 
-        <article class="card">
-          <div class="icon">🔐</div>
-          <h3>Privacy First</h3>
-          <p>Customer information must be handled securely and responsibly.</p>
-        </article>
-
-        <article class="card">
-          <div class="icon">📊</div>
-          <h3>One Control Centre</h3>
-          <p>Our future dashboard will help manage requests and service status.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta">
-      <h2>Ready for a Smarter Digital Experience?</h2>
-
-      <p style="color:#94a3b8;margin:15px 0 20px;">
-        NOVEX — Beyond Digital. Beyond Limits.
-      </p>
-
-      <a class="button" href="#services">Explore NOVEX</a>
-    </section>
-  </main>
-
-  <footer>
-    © <span id="year"></span> NOVEX. All rights reserved.
-    <br>
-    Service availability and eligibility may vary.
-  </footer>
-
-  <script>
-    const searchInput = document.getElementById("serviceSearch");
-    const serviceCards = document.querySelectorAll(".service-card");
-    const noResults = document.getElementById("noResults");
-
-    searchInput.addEventListener("input", function () {
-      const query = this.value.trim().toLowerCase();
-      let visibleCount = 0;
-
-      serviceCards.forEach(function (card) {
-        const matches = card.textContent.toLowerCase().includes(query);
-
-        card.hidden = !matches;
-
-        if (matches) {
-          visibleCount++;
-        }
-      });
-
-      noResults.hidden = visibleCount !== 0;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "Request Service";
+    button.addEventListener("click", () => {
+      serviceSelect.value = service.id;
+      document.getElementById("request").scrollIntoView({behavior:"smooth"});
     });
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+    card.append(icon,title,tag,description,price,button);
+    grid.appendChild(card);
+  });
+}
 
+services.forEach(service => {
+  const option = document.createElement("option");
+  option.value = service.id;
+  option.textContent = service.name;
+  serviceSelect.appendChild(option);
+});
+
+search.addEventListener("input",renderServices);
+category.addEventListener("change",renderServices);
+
+document.getElementById("requestForm").addEventListener("submit",event=>{
+  event.preventDefault();
+
+  const reference = "NVX-" + Date.now().toString().slice(-8);
+  const result = document.getElementById("result");
+  result.replaceChildren();
+
+  const heading = document.createElement("h3");
+  heading.textContent = "Demo Enquiry Created";
+
+  const referenceText = document.createElement("p");
+  referenceText.textContent = "Reference ID: " + reference;
+
+  const warning = document.createElement("p");
+  warning.className = "notice";
+  warning.textContent = "This is a local demo reference only. Your enquiry has not been sent or saved to a server. Please contact NOVEX through an officially published channel to make a real request.";
+
+  result.append(heading,referenceText,warning);
+  result.hidden = false;
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+renderServices();
+</script>
 </body>
 </html>
